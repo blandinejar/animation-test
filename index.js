@@ -23,11 +23,11 @@ for (const tr of triangle) {
 
 
 const randomBis = () => {
-  return Math.floor(Math.random() * (600 + 1))
+  return Math.floor(Math.random() * (900 + 1))
 }
 
 const randomTer = () => {
-  return Math.floor(Math.random() * (400 + 1))
+  return Math.floor(Math.random() * (500 + 1))
 }
 
 
@@ -35,7 +35,7 @@ const randomTer = () => {
 const parent = document.querySelectorAll('.parent');
 for (const par of parent) {
   setInterval(() => {
-    par.style.top = `${randomTer()}px`;
+    par.style.bottom = `${randomTer()}px`;
     par.style.left = `${randomBis()}px`;
   }, 1000)
 }
