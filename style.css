@@ -1,0 +1,106 @@
+
+
+body {
+  background: #eee;
+  margin: 0;
+  transition: 0.2s linear;
+  font-family: "Dosis", sans-serif;
+  color: #333;
+}
+main {
+  margin: 3rem auto 0;
+  width: 1000px;
+  height: 1000px;
+  background: rgb(209, 209, 209);
+  padding: 1rem 2rem 2rem;
+  box-shadow: 1px 2px 6px #333;
+  border-radius: 4px;
+}
+
+
+.parent {
+  margin-top: 4em;
+  background-color:rgb(136, 177, 224);
+  height: 400px;
+  width: 400px;
+  transition: 1s linear;
+  position: relative;
+  bottom: 0%;
+  left: 0%;
+}
+
+/* .parent:hover {
+  left: 400px;
+} */
+
+.child {
+  background-color: rgb(97, 189, 74);
+  height: 50%;
+  width: 50%;
+  border-radius: 50%;
+  transition: 0.5s linear;
+  /* transition: transform 1s; */
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+}
+
+.triangle {
+  box-sizing: border-box;
+  /* background-color: #f0f; */
+  width: 200px;
+  transition: 0.5s linear;
+
+  /* height: 200px; */
+  /* border-top: 100px solid transparent; */
+  border-right: 100px solid transparent;
+  border-left: 100px solid transparent;
+  border-bottom: 150px solid purple;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  animation: anim-rotate 3s linear infinite;
+}
+
+@keyframes anim-rotate {
+  100% {
+    transform: rotate(360deg);
+    transform-origin: center 75px;
+  }
+}
+
+
+.parent:hover .child {
+  /* transform: translate(100%, 100%); */
+  /* transition: 2s; */
+  background-color: rgb(13, 0, 131);
+  /* animation: left-to-right 2s ease-in-out forwards infinite alternate; */
+}
+
+.parent:hover .triangle {
+  border-bottom: 150px solid rgb(34, 121, 133);
+}
+
+@keyframes left-to-right {
+  O% {
+    transform: translateX(0%);
+  }
+
+  25% {
+    transform: translateY(100%)
+
+  }
+
+  50% {
+    transform: translate(100%, 100%)
+
+  }
+
+  75% {
+    transform: translateX(100%)
+  }
+
+  100% {
+
+  }
+}
